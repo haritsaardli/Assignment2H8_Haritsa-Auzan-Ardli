@@ -199,4 +199,5 @@ button{
 .form{
     background-color: white;
     margin: 0px 50px 50px 50px;
+    display: none;
 }
