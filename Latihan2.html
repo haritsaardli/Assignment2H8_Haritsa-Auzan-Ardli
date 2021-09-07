@@ -51,8 +51,8 @@
                 <img src="http://ilmate.kemenperin.go.id/img/user/default.png" alt="#" class="avatar" srcset="">
             </div>
             <div class="col">
-                <h2>Haritsa</h2>
-                <p>Front End Designer</p>
+                <h2 id="nama">Haritsa</h2>
+                <p id="role">Front End Designer</p>
                 <button onclick="showHide()" class="btn-kontak">Edit</button>
                 <button class="btn-resume">Resume</button>
             </div>
@@ -64,11 +64,11 @@
                 <p>Email</p>
             </div>
             <div class="col">
-                <p>Full Time</p>
-                <p>19</p>
-                <p>Jakarta</p>
-                <p>2</p>
-                <p>email@gmail.com</p>
+                <p id="avability">Full Time</p>
+                <p id="usia">19</p>
+                <p id="lokasi">Jakarta</p>
+                <p id="experiance">2</p>
+                <p id="email">email@gmail.com</p>
             </div>
         </div>
 
@@ -109,27 +109,28 @@
             </div>
         </div>
         
-        <div id="form" class="row form" style="">
-            <form action="">
+        <div id="formData" class="row form" >
+            <form method="GET" id="edit">
                 <label for="">Nama</label>
-                <input type="text" name="" id="">
+                <input type="text" name="" id="namaInput" required>
                 <label for="">Role</label>
-                <input type="text" name="" id="">
+                <input type="text" name="" id="roleInput" required>
                 <label for="">Avaibility</label>
-                <input type="text" name="" id="">
+                <input type="text" name="" id="avabilityInput" required>
                 <label for="">Usia</label>
-                <input type="text" name="" id="">
+                <input type="number" name="" id="usiaInput" required>
                 <label for="">Lokasi</label>
-                <input type="text" name="" id="">
+                <input type="text" name="" id="lokasiInput" required>
                 <label for="">Year Experiance</label>
-                <input type="number" name="" id="">
+                <input type="number" name="" id="experianceInput" required>
                 <label for="">Email</label>
-                <input type="email" name="" id="">
+                <input type="email" name="" id="emailInput" required>
                 <label for="">Password</label>
-                <input type="password" name="" id="">
+                <input type="password" name="" id="passwordInput" required>
         
                 <br>
-                <button class="btn-submit">SUBMIT</button>
+                <!-- <input class="btn-submit" type="button" value="Submit" onclick="test()"> -->
+                <button class="btn-submit" type="button" value="Submit" onclick="test()">Submit</button>
                 <!-- <input type="Submit"> -->
         
             </form>
