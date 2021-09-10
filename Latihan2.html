@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="latihan2.css">
 </head>
 <body>
@@ -34,112 +34,108 @@
 
     </div>
 
-    
-    <!-- <div class="topnav_mobile">
-        <div class="topnav-left" style="padding-inline: 50px;">
-            <a class="active" href="#search">HOME</a>
-            <a href="#about">PRODUCT</a>
-            <a href="#about">GALLERY</a>
-            <a href="#about">BLOG</a>
-            <a href="#about">INVENTORY</a>
-        </div>
-    </div> -->
 
-    <div class="container">
-        <div class="row dekstop" style="background-color: white;">
+    <div class="container-md">
+        <div class="row my-4 bg-white dekstop">
             <div class="col">
-                <img src="http://ilmate.kemenperin.go.id/img/user/default.png" alt="#" class="avatar" srcset="">
+                <!-- <img src="" alt="#"  srcset=""> -->
+                <div class="card" style="border: none;">
+                    <div class="row g-0">
+                        <div class="col-md">
+                            <img src="http://ilmate.kemenperin.go.id/img/user/default.png" class="img-fluid float-end rounded-circle avatar" alt="...">
+                        </div>
+                        <div class="col-md">
+                            <div class="card-body">
+                                <h2 class="card-title" id="nama">Haritsa</h2>
+                                <p class="card-text text-muted"id="role">Front End Designer</p>
+                                <button onclick="showHide()" type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-outline-success">Resume</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 <h2 id="nama">Haritsa</h2>
                 <p id="role">Front End Designer</p>
                 <button onclick="showHide()" class="btn-kontak">Edit</button>
                 <button class="btn-resume">Resume</button>
+            </div> -->
+            <!-- <div class="col"></div> -->
+            <div class="col" >
+                <table class="table table-borderless border-start table-hover">
+                    <tbody>
+                        <tr>
+                            <th>Avaibility</th>
+                            <td class="text-muted" id="avability">Full Time</td>
+                        </tr>
+                        <tr>
+                            <th>Usia</th>
+                            <td class="text-muted" id="usia">19</td>
+                        </tr>
+                        <tr>
+                            <th>Lokasi</th>
+                            <td class="text-muted" id="lokasi">Jakarta</td>
+                        </tr>
+                        <tr>
+                            <th>Pengalaman</th>
+                            <td class="text-muted" id="experiance">2</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td class="text-muted" id="email">email@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="col" style="border-left: 1px solid;">
-                <p>Avaibility</p>
-                <p>Usia</p>
-                <p>Lokasi</p>
-                <p>Pengalaman</p>
-                <p>Email</p>
-            </div>
+            <!-- <div class="col"></div> -->
+        </div>
+
+        <div id="formData" style="display: none;" class="row bg-white">
             <div class="col">
-                <p id="avability">Full Time</p>
-                <p id="usia">19</p>
-                <p id="lokasi">Jakarta</p>
-                <p id="experiance">2</p>
-                <p id="email">email@gmail.com</p>
+                <form  id="edit" onsubmit="test()">
+                    <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="namaInput" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Role</label>
+                        <input type="text" class="form-control" id="roleInput" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Avaibility</label>
+                        <input type="text" class="form-control" id="avabilityInput" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Usia</label>
+                        <input type="number" class="form-control" id="usiaInput" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Lokasi</label>
+                        <input type="text" class="form-control" id="lokasiInput" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Experiance</label>
+                        <input type="number" class="form-control" id="experianceInput" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="emailInput" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="passwordInput" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success" type="submit" >SUBMIT</button>
+                    </div>
+                </form>
             </div>
-        </div>
-
-        <div class="row mobile" style="background-color: white;">
-            <div class="row" style=" justify-content: space-around;">
-                <div class="col" style="text-align: center;">
-                    <img src="http://ilmate.kemenperin.go.id/img/user/default.png" alt="#" class="avatar" srcset="">
-                    <h2>Haritsa</h2>
-                    <p>Front End Designer</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button class="btn-kontak">Edit</button>
-                </div>
-                <div class="col">
-                    <button class="btn-resume">Resume</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>Avaibility</p>
-                    <p>Usia</p>
-                    <p>Lokasi</p>
-                    <p>Pengalaman</p>
-                    <p>Email</p>
-                </div>
-                <div class="col">
-                    <p>Full Time</p>
-                    <p>19</p>
-                    <p>Jakarta</p>
-                    <p>2</p>
-                    <p>email@gmail.com</p>
-                </div>
-            </div>
-            
-
-            </div>
-        </div>
-        
-        <div id="formData" class="row form" >
-            <form method="GET" id="edit">
-                <label for="">Nama</label>
-                <input type="text" name="" id="namaInput" required>
-                <label for="">Role</label>
-                <input type="text" name="" id="roleInput" required>
-                <label for="">Avaibility</label>
-                <input type="text" name="" id="avabilityInput" required>
-                <label for="">Usia</label>
-                <input type="number" name="" id="usiaInput" required>
-                <label for="">Lokasi</label>
-                <input type="text" name="" id="lokasiInput" required>
-                <label for="">Year Experiance</label>
-                <input type="number" name="" id="experianceInput" required>
-                <label for="">Email</label>
-                <input type="email" name="" id="emailInput" required>
-                <label for="">Password</label>
-                <input type="password" name="" id="passwordInput" required>
-        
-                <br>
-                <!-- <input class="btn-submit" type="button" value="Submit" onclick="test()"> -->
-                <button class="btn-submit" type="button" value="Submit" onclick="test()">Submit</button>
-                <!-- <input type="Submit"> -->
-        
-            </form>
-
-        </div>
-        
+        </div>       
 
     </div>
 
     <script src="latihan.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
